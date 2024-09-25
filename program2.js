@@ -1,7 +1,27 @@
 const decodeTheRing = function (s, p) {
 
-    // write your code here
+  let regexPattern = "^"; // The pattern must match the entire message
 
-  };
-  
-  module.exports = decodeTheRing;
+  // Loop through the decoder key to translate it into a regular expression
+  for (let i = 0; i < pattern.length; i++) {
+    let char = pattern[i];
+    if (char === '*') {
+      regexPattern += ".*"; // * can match any sequence of characters, including none
+    } else if (char === '?') {
+      regexPattern += "."; // ? matches exactly one character
+    } else {
+      regexPattern += char; // Regular characters should match themselves
+    }
+  }
+
+  regexPattern += "$"; // The pattern must match the entire message
+
+  // Create a regular expression object with the generated pattern
+  let regex = new RegExp(regexPattern);
+
+  // Test if the message matches the pattern
+  return regex.test(message);
+
+};
+
+module.exports = decodeTheRing;
