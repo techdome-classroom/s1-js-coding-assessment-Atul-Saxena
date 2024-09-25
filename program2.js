@@ -3,7 +3,7 @@ const decodeTheRing = function (s, p) {
   let regexPattern = "^"; // The pattern must match the entire message
 
   // Loop through the decoder key to translate it into a regular expression
-  for (let i = 0; i < pattern.length; i++) {
+  for (let i = 0; i < p.length; i++) {
     let char = pattern[i];
     if (char === '*') {
       regexPattern += ".*"; // * can match any sequence of characters, including none
