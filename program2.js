@@ -20,7 +20,7 @@ const decodeTheRing = function (s, p) {
   let regex = new RegExp(regexPattern);
 
   // Test if the message matches the pattern
-  return regex.test(message);
+  return regex.test(s);
 
 };
 
