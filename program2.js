@@ -5,11 +5,11 @@ const decodeTheRing = function (s, p) {
   for (let i = 0; i < p.length; i++) {
     let char = p[i];
     if (char === '*') {
-      regexPattern += ".*"; // * can match any sequence of characters, including none
+      regexPattern += ".*";
     } else if (char === '?') {
-      regexPattern += "."; // ? matches exactly one character
+      regexPattern += ".";
     } else {
-      regexPattern += char; // Regular characters should match themselves
+      regexPattern += char;
     }
   }
 
