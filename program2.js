@@ -19,7 +19,6 @@ const decodeTheRing = function (s, p) {
   // Create a regular expression object with the generated pattern
   let regex = new RegExp(regexPattern);
 
-  // Test if the message matches the pattern
   return regex.test(s);
 
 };
