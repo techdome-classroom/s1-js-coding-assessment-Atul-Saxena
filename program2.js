@@ -4,7 +4,7 @@ const decodeTheRing = function (s, p) {
 
   // Loop through the decoder key to translate it into a regular expression
   for (let i = 0; i < p.length; i++) {
-    let char = pattern[i];
+    let char = p[i];
     if (char === '*') {
       regexPattern += ".*"; // * can match any sequence of characters, including none
     } else if (char === '?') {
