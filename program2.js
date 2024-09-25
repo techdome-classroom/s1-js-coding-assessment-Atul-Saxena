@@ -1,6 +1,6 @@
 const decodeTheRing = function (s, p) {
 
-  let regexPattern = "^"; // The pattern must match the entire message
+  let regexPattern = "^";
 
   // Loop through the decoder key to translate it into a regular expression
   for (let i = 0; i < p.length; i++) {
