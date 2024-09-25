@@ -14,7 +14,7 @@ const decodeTheRing = function (s, p) {
     }
   }
 
-  regexPattern += "$"; // The pattern must match the entire message
+  regexPattern += "$";
 
   let regex = new RegExp(regexPattern);
 
