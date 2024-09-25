@@ -20,11 +20,9 @@ const getTotalIsles = function (grid) {
     dfs(row, col - 1);
   };
 
-  // Iterate through the entire grid to find unvisited land
   for (let row = 0; row < numRows; row++) {
     for (let col = 0; col < numCols; col++) {
       if (grid[row][col] === 'L') {
-        // Found a new island, perform DFS to mark all connected land
         islandCount++;
         dfs(row, col);
       }
